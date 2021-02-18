@@ -1,0 +1,295 @@
+body{
+    background: url("assets/images/body-background.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.deleteBtn {
+    opacity: 0;
+    transition: 0.3s;
+    top:-160px !important;
+}
+
+.note:hover .deleteBtn{
+    opacity: 1;
+}
+
+.note_text {
+    font-style: italic;
+    font-weight: bold;
+    margin-top: 37px;
+    padding: 10px;
+    margin-left: 22px;
+    width: 155px;
+    max-height: 140px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    word-wrap: break-word;
+    position: relative;
+    height: 140px;
+    top: 11px;
+  }
+  
+  .date_text {
+    font-style: italic;
+    font-weight: bold;
+    margin-top: 2px;
+    padding: 10px;
+    display: inline-block;
+    margin-left: 25px;
+    position: absolute;
+    font-size: 10px;
+    color: black;
+    text-shadow: 1px 1px 2px red;
+  }
+  
+  .time_text {
+    font-style: italic;
+    font-weight: bold;
+    padding: 8px;
+    margin-top: 16px;
+    margin-left: 25px;
+    position: absolute;
+    font-size: 10px;
+    color: black;
+    text-shadow: 1px 1px 2px red;
+  }
+
+.noteDetails {
+    font-style: italic;
+    font-weight: bold;
+    direction: ltr;
+    width: 600px;
+    height: 200px;
+    position:absolute;
+    top: 150px;
+    left: 460px;
+    background-image: url("assets/images/note4.jpg");
+    border-radius: 20px;
+}
+
+.text{
+   font-size: 20px;
+   width: 440px;
+   height: 50px;
+   background: none;
+   border: none;
+   padding-top: 10px;
+   position: absolute;
+   top: 20px;
+   right: 5px;
+}
+
+.time {
+    font-size: 20px;
+    position: absolute;
+    bottom: 25px;
+    right: 20px;
+    background: none;
+    border: none;
+}
+
+.date { 
+    font-size: 20px;
+    position: absolute;
+    bottom: 23px;
+    right: 300px;
+    background: none;
+    border: none; 
+}
+
+#dateLabel {
+    font-weight: bold;
+    font-size: 25px;
+    position: absolute;
+    bottom: 18px;
+    left: 4px;
+}
+
+#timeLabel {
+    font-weight: bold;
+    font-size: 25px;
+    position: absolute;
+    bottom: 18px;
+    right:130px;
+}
+
+#taskLabel {
+    position: absolute;
+    top: 25px;
+    left:10px;
+    font-size:27px;
+}
+
+#buttons {
+    position: absolute;
+    top: 370px;
+    left: 680px;
+}
+
+.note {
+    background-image: url("assets/images/‏‏notebg.png");
+    width: 200px;
+    height: 250px;
+    display: inline-block;
+    opacity: 0.9;
+    -webkit-transition: -webkit-transform .3s;
+    transition: -webkit-transform .3s;
+    transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s;
+    margin: 20px;
+    animation-name: slideRight;
+    -webkit-animation-name: slideRight;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-timing-function: ease-in-out;
+    visibility: visible !important;
+    margin-top: 400px;
+}
+  
+@keyframes slideRight {
+ 0% {
+-webkit-transform: translateX(-150%);
+          transform: translateX(-150%);
+}
+ 100% {
+-webkit-transform: translateX(0%);
+  transform: translateX(0%);
+}
+}
+  
+@-webkit-keyframes slideRight {
+0% {
+  -webkit-transform: translateX(-150%);
+}
+100% {
+ -webkit-transform: translateX(0%);
+}
+}
+
+.note:hover {
+-webkit-transform: scale(1.2);
+transform: scale(1.2);
+}
+
+.glyphicon-remove {
+color: red;
+position: absolute;
+margin-left: 150px;
+}
+
+::-webkit-scrollbar {
+width: 7px;
+}
+  
+::-webkit-scrollbar-track {
+-webkit-box-shadow: inset 0 0 5px grey;
+box-shadow: inset 0 0 5px grey;
+border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+background: red;
+border-radius: 10px;
+}
+
+/* ------------------- snack bar ----------------- */
+
+#snackDate {
+visibility: hidden;
+min-width: 250px;
+margin-left: -125px;
+background: linear-gradient(45deg, rgb(78, 81, 255), rgb(72, 154, 248));
+color: #fff;
+text-align: center;
+border-radius: 2px;
+padding: 16px;
+position: fixed;
+z-index: 1;
+left: 50%;
+bottom: 30px;
+font-size: 17px;
+}
+  
+#snackDate.show {
+visibility: visible;
+-webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+#snackNote {
+visibility: hidden;
+min-width: 250px;
+margin-left: -125px;
+background: linear-gradient(45deg, rgb(78, 81, 255), rgb(72, 154, 248));
+color: #fff;
+text-align: center;
+border-radius: 2px;
+padding: 16px;
+position: fixed;
+z-index: 1;
+left: 50%;
+bottom: 30px;
+font-size: 17px;
+}
+  
+#snackNote.show {
+visibility: visible;
+-webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+  
+@-webkit-keyframes fadein {
+from {bottom: 0; opacity: 0;} 
+to {bottom: 30px; opacity: 1;}
+}
+  
+@keyframes fadein {
+from {bottom: 0; opacity: 0;}
+to {bottom: 30px; opacity: 1;}
+}
+  
+@-webkit-keyframes fadeout {
+from {bottom: 30px; opacity: 1;} 
+to {bottom: 0; opacity: 0;}
+}
+  
+@keyframes fadeout {
+from {bottom: 30px; opacity: 1;}
+to {bottom: 0; opacity: 0;}
+}
+
+/*------------------------- header style css ---------------- */
+
+@import url('https://fonts.googleapis.com/css?family=Codystar:300&display=swap');
+
+.neons {
+   font-family: 'Codystar' !important;
+   text-align: center;
+}
+
+.neons h1 {
+font-size: 5rem;
+text-align: center;
+font-weight: bold;
+-webkit-animation: glow 2s ease-in-out infinite alternate;
+-moz-animation: glow 2s ease-in-out infinite alternate;
+animation: glow 2s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+from {
+    color: #fff;
+    text-shadow: 0 0 10px #00c3ff, 0 0 20px #00c3ff, 0 0 30px #00c3ff, 0 0 40px #00c3ff, 0 0 50px #00c3ff, 0 0 60px #00c3ff, 0 0 70px #00c3ff, 0 0 90px #00c3ff;
+}
+  
+to {
+    color: rgb(0, 0, 0);
+    text-shadow: 0 0 20px #00c3ff, 0 0 30px #00c3ff, 0 0 40px #00c3ff, 0 0 50px #00c3ff, 0 0 60px #00c3ff, 0 0 70px #00c3ff, 0 0 80px #00c3ff, 0 1 90px #00c3ff;
+  }
+}
+  
+ 

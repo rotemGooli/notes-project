@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes Project - Rotem Gooli </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
+</head>
+<body onload="loadNotes()">
+    <div class="container-fluid">
+        <div class="neons">
+            <h1><em>My Task Board</em></h1>
+         </div>
+
+        <br>
+    
+        <div class="noteDetails">
+        <label for="text" id="taskLabel">  Task Data : </label>
+        <input class="text" type="text" placeholder="write here.." id="noteBox">
+        
+        <label for="text" id="dateLabel">  Date : </label>
+        <input class="date" type="date" id="dateBox">
+    
+        <label for="text" id="timeLabel">  Time : </label>
+        <input class="time" type="time" id="timeBox">
+        </div>
+    
+        <div id="buttons">
+    
+        <button class="btn btn-warning shadow" onclick="save()"> Save note </button>
+        <button class="btn btn-danger shadow" onclick="clearNote()"> Clear </button>
+       
+        </div>
+    
+        <span id="snackNote">Please , fill the note!</span>
+        <span id="snackDate">Please , fill the date!</span>
+    
+        <div class="row">
+            <div class="col">
+                <div id="notesContainer">   
+                </div>
+            </div>
+        </div>        
+    </div> 
+</body>
+</html>
